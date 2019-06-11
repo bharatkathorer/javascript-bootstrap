@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>radioValidation</title>
+</head>
+<body>
+	<form name="rv" onsubmit="return fun2()">
+		<label>send</label>
+			<input type="radio" name="r" value="send" onkeyup="return fun2()">
+		<label>Delete</label>
+			<input type="radio" name="r" value="recive">
+		<br>
+		<span id="msg2" style="color: red"></span>
+		<br/>	
+		<input type="submit" value="Submit *">
+	</form>
+
+	<script type="text/javascript">
+		function fun2(){
+
+		var r=document.rv.r.value;
+		if(r==''){
+			document.getElementById('msg2').innerHTML ="* pls Select any one";
+			return false;
+			
+		}else{
+			document.getElementById("msg2").innerHTML =`valided u selected ${r}`;
+			return false;
+		}
+	}
+	</script>
+</body>
+</html>

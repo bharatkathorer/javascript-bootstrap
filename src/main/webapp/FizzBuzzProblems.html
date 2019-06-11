@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var i=1;
+	var ob=[];
+	for(i;i<=100;i++){
+
+		if((i%3==0)&&(i%5==0)){
+			ob.push("FizzBuzz!")
+		}else
+
+		if((i%3)==0){
+			ob.push("Fizz!")
+
+		}else if((i%5)==0){
+			ob.push("Buzz!")
+		}else 
+		 {
+			ob.push(i);
+		}
+
+	}
+	document.write(ob)
+	console.log(ob);
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Events</title>
+</head>
+<body>
+	<div>
+		<h1 id="item">Welcome User :)</h1>
+		<input type="text" id="name"><br>
+		<input type="text" id="add"><br>
+		<input type="text" id="mobile"><br>
+		<button onclick="fun('name','add','mobile','item')">Submit</button>
+	</div>
+
+<script type="text/javascript">
+	function fun(name,add,mobile,item){
+		var name=document.getElementById(name).value;
+		var add=document.getElementById(add).value;
+		var mobile=document.getElementById(mobile).value;
+		var item=document.getElementById(item).innerHTML;
+		document.write(item+"<br>");
+		document.write(name+"<br>"+add+"<br>"+mobile);
+
+	}
+	document.write("<br>");
+		document.write(window.location.href);
+</script>
+
+</body>
+</html>

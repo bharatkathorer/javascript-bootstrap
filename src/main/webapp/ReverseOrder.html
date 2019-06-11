@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ReverseOrder</title>
+	</head>
+	<body>
+		Enter Syntax :-<input type="text" id="name" onkeyup="fun()" ><br/> Syntax In Riverse Order :-<input type="text" id="rshow" onkeyup="fun2()">
+		
+		<script type="text/javascript">
+			function fun() {
+				var str=document.getElementById('name').value;
+
+				
+				var str2="";
+				for(var i=str.length-1;i>=0;i--){
+					str2 +=str[i];
+
+				}
+				document.getElementById('rshow').value=str2;
+
+			}
+			function fun2() {
+				var str=document.getElementById('rshow').value;
+
+				
+				var str2="";
+				for(var i=str.length-1;i>=0;i--){
+					str2 +=str[i];
+
+				}
+				document.getElementById('name').value=str2;
+
+			}
+		</script>
+	</body>
+</html>

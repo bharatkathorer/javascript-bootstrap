@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ToolTips In Bs</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<br><br><br>
+<div class="jumbotron bg-secondary">
+	<div class="container col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1">
+		
+				<a href="#" title="Welcome left" data-toggle="tooltip" data-placement="left">WC</a><br><br>
+				<a href="#" title="Welcome right" data-toggle="tooltip" data-placement="right">WC</a><br><br>
+				<a href="#" title="Welcome top" data-toggle="tooltip" data-placement="top">WC</a><br><br>
+				<a href="#" title="Welcome bottom" data-toggle="tooltip" data-placement="bottom">WC</a><br><br>
+		
+	</div></div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('[data-toggle="tooltip"]').tooltip();
+		});
+	</script>
+</body>
+</html>

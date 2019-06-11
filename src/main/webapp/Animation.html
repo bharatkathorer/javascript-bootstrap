@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation</title>
+		<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+<body>
+<br><br><br><br><br><br>
+<div class="container">
+  <h2>Card Deck One</h2><br/>
+  
+  <div class="card-deck">
+   
+    <div class="card bg-warning " id="one">
+      <div class="card-body text-center">
+        <div class="card-text" style="width:300px">
+    	<img class="card-img-top" src="img_avatar1.png" alt="Card image" >
+  		</div>
+      </div>
+    </div>
+
+    <div class="card bg-success " id="two">
+      <div class="card-body text-center">
+        <div class="card-text" style="width:300px">
+    	<img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+  		</div>
+      </div>
+    </div>
+
+    <div class="card bg-danger " id="three">
+      <div class="card-body text-center">
+        <div class="card-text" style="width:300px">
+    	<img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+  		</div>
+      </div>
+    </div>  
+  </div>
+
+</div><br/>
+<div style="color:red; text-align: center; background-color: #80bd9e; height: 400px;width: 100%" >
+	<h2 style="line-height: 400px" id="wel">Welcome To My Web:)</h2>
+</div>
+<br/>
+
+<div class="container">
+ 
+  <h2>Card Deck Two</h2><br/>
+  
+  <div class="card-deck">
+   
+    <div class="card bg-warning " id="four">
+      <div class="card-body text-center">
+        <div class="card-text" style="width:300px">
+    	<img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+  		</div>
+      </div>
+    </div>
+
+    <div class="card bg-success " id="five">
+      <div class="card-body text-center">
+        <div class="card-text" style="width:300px">
+    	<img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+  		</div>
+      </div>
+    </div>
+
+    <div class="card bg-danger " id="six">
+      <div class="card-body text-center">
+        <div class="card-text" style="width:300px">
+    	<img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+  		</div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<br/>
+<br/>
+<button onclick="my()">animation</button>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+
+	$(window).scroll(function my() {
+		var pt=$(document).scrollTop();
+	
+
+		if((pt>3) && (pt<10)){
+
+			$('#one').addClass('animated fadeInLeftBig');
+			$('#two').addClass('animated flipInX');
+			$('#three').addClass('animated jello');
+
+			
+		}
+		if((pt>200)&&(pt<284)){
+			$('#wel').addClass('animated zoomIn');
+		}
+		if((pt>300)&&(pt<481)){
+			$('#four').addClass('animated flipInY');
+			$('#five').addClass('animated heartBeat');
+			$('#six').addClass('animated rotateInUpLeft')
+		}
+	});
+
+		
+	});
+</script>
+</body>
+</html>

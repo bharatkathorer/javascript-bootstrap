@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form Validation</title>
+		<style type="text/css">
+			.st{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="text-align: center;" id="f">
+			<form name="validationform" onsubmit="return myFun()">
+				<input type="text" name="username" id="username" placeholder="EnterUsername"><span id="umsg" class="st"></span><br/><br/>
+				<input type="password" name="password" id="password" placeholder="password"><span id="pmsg" class="st" ></span><br/><br/>
+				<input type="password" name="password1" id="password1" placeholder="conform password"><span id="cpmsg" class="st"></span><br/><br/>
+				<input type="phone" name="phone" id="phone" placeholder="phone"><span id="mmsg" class="st"></span><br/><br/>
+				<input type="email" name="eamil" id="email" placeholder="email"><span id="emsg" class="st"></span><br/><br/>
+				<input type="submit" value="Submit">
+			</form>
+			<script type="text/javascript">
+			
+			const myFun=()=>{
+				let username=document.getElementById("username").value;
+				let password=document.getElementById("password").value;
+				let password1=document.getElementById("password1").value;
+				let email=document.getElementById("email").value;
+				let phone=document.getElementById("phone").value;
+				var rgx=/^[A-Za-z]+$/;
+				var el=email.length;
+				
+			
+				if(username==''){
+					document.getElementById('umsg').innerHTML="* plses fill username !";
+					return false;
+				}
+				if(username.match(/^[A-Za-z]+$/))
+					true
+				else{
+					document.getElementById('umsg').innerHTML="* alphbets only allow username !";
+					return false;
+				}
+				if ((username.length>20) || (username.length<3)){
+					document.getElementById('umsg').innerHTML="* username must be Min 3 Or Max 20 character !";
+					return false;
+				}
+				if(password==''){
+					document.getElementById('pmsg').innerHTML="* plses fill password !";
+					return false;
+				}
+				if(password.length<6 || password.length>16){
+					document.getElementById('pmsg').innerHTML="* password length less then 6 or more then 16!";
+					return false;
+				}
+				if(password!=password1){
+					document.getElementById('cpmsg').innerHTML="* Conform Password incorrect !";
+					return false;
+				}
+				if(password1==''){
+					document.getElementById('cpmsg').innerHTML="* plses fill Conform Password !";
+					return false;
+				}
+				if(isNaN(phone)){
+					document.getElementById('mmsg').innerHTML="* mobile no only Digits allow !";
+					return false;
+				}
+				if(phone==''){
+					document.getElementById('mmsg').innerHTML="* plses fill Mobile No !";
+					return false;
+				}
+				if(phone.length!=10){
+					document.getElementById('mmsg').innerHTML="* Mobile No Must be 10 digt!";
+					return false;
+				}
+				if((phone.charAt(0)!=9)&&(phone.charAt(0)!=7)&&(phone.charAt(0)!=8)){
+					document.getElementById('mmsg').innerHTML="* Invalid Mobile No !";
+					return false;
+				}
+				if(email==''){
+					document.getElementById('emsg').innerHTML="* plses fill Email !";
+					return false;
+				}
+				if((email.charAt(el-4)!='.') && (email.charAt(el-3)!='.')){
+					document.getElementById('emsg').innerHTML="* Invalid Email !";
+					return false;
+				}
+				}
+			</script>
+		</div>
+	</body>
+</html>

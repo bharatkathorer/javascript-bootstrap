@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date & Time</title>
+</head>
+<body>
+
+	<p id="time" align="right"></p><p id="date" align="end"></p>
+	<h1>Dyanamic Date & Time</h1>
+	<button onclick="clearInterval(dc)">StopClock</button>
+	
+
+	<script type="text/javascript">
+		
+			
+ 			var dc=setInterval(dynamicClock,1000);
+ 		
+
+		
+
+ 	function dynamicClock(){
+		var dt=new Date();
+
+		var year=dt.getFullYear();
+		var month=dt.getMonth()+1;
+		var day=dt.getDay();
+		
+		var getdate=(day+"/"+month+"/"+year);
+		
+
+		var hr=dt.getHours();
+		var sec=dt.getSeconds();
+		var min=dt.getMinutes();
+
+		var gettime=(hr+":"+min+":"+sec+" sec")
+
+
+
+		document.getElementById('date').innerHTML=getdate;
+		document.getElementById('time').innerHTML=gettime;
+
+}
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+</head>
+<body>
+ <div id="iteam1">
+ 	Welcome To Print One Page
+ 	<input type="Button" value="Print" onclick="PrintItem('iteam1')">
+ </div>
+  <div id="iteam2">
+ 	Welcome To Print Two Page
+ 	<input type="Button" value="Print" onclick="PrintItem('iteam2')">
+ </div>
+  <div id="iteam3">
+ 	Welcome To Print Three Page
+ 	<input type="Button" value="Print" onclick="PrintItem('iteam3')">
+ </div>
+<button onclick="PrintAll()">AllPrint</button>
+ <script type="text/javascript">
+ 	function PrintAll(){
+ 		window.print();
+ 	}
+ 	function PrintItem(items){
+ 		var backup=document.body.innerHTML;
+ 		var divc=document.getElementById(items).innerHTML;
+ 		document.body.innerHTML =divc;
+ 		window.print();
+ 		document.body.innerHTML=backup;
+ 	
+ 	}
+
+ </script>
+</body>
+</html>

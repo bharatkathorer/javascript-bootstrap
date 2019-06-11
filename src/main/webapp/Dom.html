@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DomExamples</title>
+</head>
+<body>
+<h1 style="color: red" id="he">Date And time Format in Dyanamic!</h1>
+<h2 id="showdate"></h2>
+<h2 id="showclock"></h2>
+
+<script type="text/javascript">
+
+
+var clock=setInterval(myclock ,1000);
+function myclock() {
+	
+	var v=new Date();
+	var date=v.getDate();
+	var month=v.getMonth()+1;
+	var year=v.getFullYear();
+	var da=(date+"/"+month+"/"+year+"<br>");
+	document.getElementById('showdate').innerHTML=da;
+
+	var p=(v.getHours()+" : "+v.getMinutes()+" : "+v.getSeconds()+" sec<br/>");
+	document.getElementById('showclock').innerHTML=p;
+}
+</script>
+
+
+
+
+
+<!-- <div id="one">
+	<p>First Print</p>
+	<button onclick="PrintPage('one')">printone</button>
+</div>
+<div id="two">
+	<p>Two Print</p>
+	<button onclick="PrintPage('two')">printtwo</button>
+</div>
+<div id="three">
+	<p>Three Print</p>
+	<button onclick="PrintPage('three')">printthree</button>
+
+</div>
+
+<br/>
+<button onclick="PrintAllPage()">PrintAll</button>
+</div>
+<script type="text/javascript">
+	function PrintAllPage(){
+		window.print();
+	}
+	function PrintPage(con) {
+		var headd=document.getElementById("he").innerText;
+		var pagebackup=document.body.innerHTML;
+		var cont=document.getElementById(con).innerHTML;
+		document.body.innerHTML=headd+"<br>"+cont;
+		window.print();
+		document.body.innerHTML=pagebackup;
+
+	}
+</script> -->
+
+
+
+
+	
+<!-- 
+
+	<script type="text/javascript">
+	
+	document.write(window.location.href);
+	function go(){
+		window.location.assign("file:///D:/MyApp/JavaScript/src/main/webapp/event.html");
+	}
+</script> -->
+
+
+
+<!-- 
+<h2 id="co"> Bharat</h2>
+<h2 id="co1" style="text-align: center; height: 10px;"> Bharat Kathore</h2>
+<script type="text/javascript">
+
+	document.getElementById("co").style.color="cyan";
+	document.getElementById("co1").setAttribute(
+		"style","color:red; background-color: cyan; text-align: center; height: 5px;"
+
+		);
+	
+</script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- <p id="name">Bharat</p>
+	<p class="welcome">Kathore 0</p>
+	<p class="welcome">Kathore 1</p>
+	<p class="welcome">Kathore 2</p>
+	<p class="welcome">Kathore 3</p>
+
+	<ul><li>bharat</li>
+		<li>balu</li>
+		<li>kathore</li></ul>
+<script type="text/javascript">
+	var chile=document.body.children;
+	console.log(chile);
+	var pa=document.createElement("p");
+	var tnode=document.createTextNode("bharat balu Kathore");
+	pa.appendChild(tnode);
+	console.log(pa);
+	document.body.appendChild(pa);
+
+	var list=document.querySelector("ul");
+	console.log(list);
+	console.log(list.lastChild);
+	var firstSibling = name.nextElementsSibling;
+	console.log(list.parentNode);
+</script> -->
+
+
+	<!-- <script type="text/javascript">
+		var v=document.getElementById('name').innerText;
+		document.write(v+"<br>");
+	</script>
+
+	<script type="text/javascript">
+		document.write("<br>");
+		var v1=document.getElementsByClassName('welcome')[2].innerHTML;
+		document.write(v1);
+	</script>
+	<script type="text/javascript">
+		var tag=document.getElementsByTagName("p");
+		document.write(tag);
+		console.log(tag);
+	</script>
+	<script type="text/javascript">
+		var par=document.querySelector("p").innerHTML;
+		var par=document.querySelector("p").innerHTML;
+		document.write("<br>"+par);
+
+	</script> -->
+
+</body>
+</html>

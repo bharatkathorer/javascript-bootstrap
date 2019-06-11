@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			.form1{
+				width: 140px;
+				height: 345px;
+				margin: auto;
+				border: 2px solid black;
+				background-color: cyan;
+			}
+			input{
+				width: 40px;
+				height: 30px;
+				margin: auto;
+				background-color: black;
+				color: white;
+			}
+			#ans{
+				width: 130px;
+				height: 40px
+			}
+			#end{
+				width: 63px;
+				height: 25px;
+			}
+		</style>
+		<title>Calculator.</title>
+	</head>
+	<body bgcolor="black">
+		<div class="form1">
+			<form name="calculator" >
+				<input type="text"  name="answer" id='ans'>
+				<br/><br/>
+				<input type="button" value=" 1 " onclick="calculator.answer.value +='1' ">
+				<input type="button" value=" 2 " onclick="calculator.answer.value +='2' ">
+				<input type="button" value=" 3 " onclick="calculator.answer.value +='3' ">
+				<br/><br/>
+				<input type="button" value=" 4 " onclick="calculator.answer.value +='4' ">
+				<input type="button" value=" 5 " onclick="calculator.answer.value +='5' ">
+				<input type="button" value=" 6 " onclick="calculator.answer.value +='6' ">
+				<br/><br/>
+				<input type="button" value=" 7 " onclick="calculator.answer.value +='7' ">
+				<input type="button" value=" 8 " onclick="calculator.answer.value +='8' ">
+				<input type="button" value=" 9 " onclick="calculator.answer.value +='9' ">
+				<br/><br/>
+				<input type="button" value=" 0 " onclick="calculator.answer.value +='0' ">
+				<input type="button" value=" . " onclick="calculator.answer.value +='.' ">
+				<input type="button" value=" + " onclick="calculator.answer.value +='+' ">
+				<br/><br/>
+				<input type="button" value=" - " onclick="calculator.answer.value +='-' ">
+				<input type="button" value=" * " onclick="calculator.answer.value +='*' ">
+				<input type="button" value=" / " onclick="calculator.answer.value +='/' ">
+				<br/><br/>
+				<input type="button" value=" = " onclick="calculator.answer.value =eval(calculator.answer.value)  " id="end">
+				<input type="button" value=" clearAll " onclick="calculator.answer.value='' " id="end">
+			</form>
+			
+		</div>
+	</body>
+</html>
